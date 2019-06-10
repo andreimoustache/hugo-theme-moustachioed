@@ -6,7 +6,7 @@
         <ul>
             {{ range .Site.Menus.main }}
             <li>
-                <a href="{{ .URL }}">{{ .Name }}</a>
+                <a href="{{ .URL }}" title="{{ .Name }}">{{ .Pre }}</a>
             </li>
             {{ end }}
         </ul>
