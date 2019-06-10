@@ -1,0 +1,13 @@
+name = "moustachioed"
+license = "MIT"
+licenselink = "https://github.com/andreimoustache/moustachioed/blob/master/LICENSE"
+description = "A moustachioed theme"
+homepage = "https://andreimoustache.github.io/hugo-theme-moustachioed"
+tags = ["clean", "personal"]
+features = []
+min_version = "0.41"
+
+[author]
+  name = "Andrei Mustață"
+  homepage = "https://amoustache.net"
+
