@@ -2,5 +2,13 @@
     <section>
         <h1>This is Moustachioed.</h1>
         <p class="centered-text">& these are some links</p>
+
+        <ul>
+            {{ range .Site.Menus.main }}
+            <li>
+                <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+        </ul>
     </section>
 {{ end }}
