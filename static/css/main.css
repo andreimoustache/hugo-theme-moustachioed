@@ -9,6 +9,9 @@ body {
 
     font-family: 'EB Garamond', serif;
     font-weight: 100;
+
+    background-color: #fff;
+    color: #3f3f3f;
 }
 
 footer {
@@ -33,4 +36,12 @@ ul {
 
 li {
     justify-self: center;
+}
+
+.double-text {
+    font-size: 2.5em;
+}
+
+a:hover {
+    color: #000;
 }
