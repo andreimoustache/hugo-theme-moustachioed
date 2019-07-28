@@ -1,7 +1,7 @@
 {{ define "main" }}
     <section>
-        <h1>This is Moustachioed.</h1>
-        <p class="centered-text">& these are some links</p>
+        <h1>{{ .Params.title | default "This is Moustachioed." }}</h1>
+        <p class="centered-text">{{ .Params.subtitle | default "& these are some links" }}</p>
 
         <ul class="double-text">
             {{ range .Site.Menus.main }}
