@@ -47,3 +47,11 @@ li {
 a:hover {
     color: #000;
 }
+
+.posts {
+    width: 25%;
+}
+
+.posts footer {
+    font-style: italic;
+}
