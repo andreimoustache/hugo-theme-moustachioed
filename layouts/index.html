@@ -15,7 +15,7 @@
     </section>
 
     <section class="posts">
-      {{ range .Pages }}
+      {{ range (where .Site.Pages ".Type" "==" "post") }}
         <article class="post-summary">
           <header>
             <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
