@@ -4,9 +4,11 @@
         <p class="centered-text">{{ .Params.subtitle | default "& these are some links" }}</p>
 
         <ul class="double-text">
-            {{ range .Site.Menus.main }}
+            {{ range $link := .Params.links }}
             <li>
-                <a href="{{ .URL }}" title="{{ .Name }}">{{ .Pre }}</a>
+                <a href="{{ $link.url }}" title="{{ $link.name }}">
+                  <i class="fab fa-{{ $link.fa_logo }}"></i>
+                </a>
             </li>
             {{ end }}
         </ul>
