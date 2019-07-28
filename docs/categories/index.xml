@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Moustachioed Hugo theme</title>
+    <link>https://andreimoustache.github.io/hugo-theme-moustachioed/categories/</link>
+    <description>Recent content in Categories on Moustachioed Hugo theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://andreimoustache.github.io/hugo-theme-moustachioed/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
