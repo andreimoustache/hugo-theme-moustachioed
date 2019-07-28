@@ -15,15 +15,16 @@
     </section>
 
     <section class="posts">
-      <article class="post-summary">
-        <header>
-          <h2><a href="post-title">Lorem ipsum</a></h2>
-        </header>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          [...] <a href="#read-full">(read full)</a></p>
-        <footer>
-          <p>Published on the <time datetime="2019-08-10T07:00:00+03:00">10th of August</time>, in the <a href="#lol">lol</a> categories.</p>
-        </footer>
-      </article>
+      {{ range .Pages }}
+        <article class="post-summary">
+          <header>
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          </header>
+          <p>{{ .Summary }}</p>
+          <footer>
+            <p>Published in <time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2006" }}</time>.</p>
+          </footer>
+        </article>
+      {{ end }}
     </section>
 {{ end }}
