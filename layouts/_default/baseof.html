@@ -2,7 +2,11 @@
 <html>
     {{- partial "head.html" . -}}
     <body>
-        {{- partial "header.html" . -}}
+        {{ if .IsHome }}
+            {{- partial "home-header.html" . -}}
+        {{ else }}
+            {{- partial "header.html" . -}}
+        {{ end }}
         {{- block "main" . }}{{- end }}
         {{- partial "footer.html" . -}}
     </body>
