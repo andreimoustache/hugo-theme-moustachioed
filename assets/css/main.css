@@ -60,6 +60,14 @@ a:hover {
     font-style: italic;
 }
 
+header {
+    width: 100%;
+}
+
+header a {
+    text-decoration: none;
+}
+
 .post pre {
     overflow-x: scroll;
 }
