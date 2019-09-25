@@ -59,3 +59,7 @@ a:hover {
 .posts footer {
     font-style: italic;
 }
+
+.post pre {
+    overflow-x: scroll;
+}
