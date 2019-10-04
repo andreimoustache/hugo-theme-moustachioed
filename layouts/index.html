@@ -1,10 +1,11 @@
 {{ define "main" }}
-    <section>
-        <h1>{{ .Params.title | default "This is Moustachioed." }}</h1>
-        <p class="centered-text">{{ .Params.subtitle | default "& these are some links" }}</p>
+    <section class="page">
+      <article class="intro">
+        <h1>{{ .Site.Params.title | default "This is Moustachioed." }}</h1>
+        <p class="centered-text">{{ .Site.Params.subtitle | default "& these are some links" }}</p>
 
         <ul class="double-text">
-            {{ range $link := .Params.links }}
+            {{ range $link := .Site.Params.links }}
             <li>
                 <a href="{{ $link.url }}" title="{{ $link.name }}">
                   <i class="fab fa-{{ $link.fa_logo }}"></i>
@@ -12,5 +13,20 @@
             </li>
             {{ end }}
         </ul>
+      </article>
+
+    <article class="posts">
+      {{ range (where .Site.Pages ".Type" "==" "post") }}
+        <article class="post-summary">
+          <header>
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          </header>
+          <p>{{ .Summary }}</p>
+          <footer>
+            <p>Published in <time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2006" }}</time>.</p>
+          </footer>
+        </article>
+      {{ end }}
+      </article>
     </section>
 {{ end }}

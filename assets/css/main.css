@@ -2,7 +2,7 @@ body {
     height: 100vh;
 
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(3rem, 0.6fr) 1fr minmax(3rem, 0.6fr);
     grid-template-rows: 1fr 1fr 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -15,6 +15,10 @@ body {
     background-color: #fff;
     color: #3f3f3f;
 }
+
+header.page { grid-area: 1 / 1 / 2 / 4; }
+section.page { grid-area: 2 / 2 / 3 / 3; }
+footer.page { grid-area: 3 / 1 / 4 / 4; }
 
 footer {
     align-self: end;
@@ -50,4 +54,24 @@ a:visited, a:link {
 
 a:hover {
     color: #000;
+}
+
+.posts footer {
+    font-style: italic;
+}
+
+header.page > .subtitle {
+    text-align: end;
+}
+
+header.page > .subtitle > p > a {
+    margin-left: .4rem;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.post pre {
+    overflow-x: scroll;
 }
