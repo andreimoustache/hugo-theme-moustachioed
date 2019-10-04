@@ -64,6 +64,10 @@ header.page > .subtitle {
     text-align: end;
 }
 
+header.page > .subtitle > p > a {
+    margin-left: .4rem;
+}
+
 header a {
     text-decoration: none;
 }

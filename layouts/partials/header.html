@@ -1,7 +1,14 @@
     <header class="page">
-        <section class="title double-text">
-            <span>
-                <a href="/">{{ .Site.Title }}</a>
-            </span>
+        <section class="title">
+            <a href="{{ .Site.Home.Permalink }}"><h1>{{ .Site.Title }}</h1></a>
+        </section>
+        <section class="subtitle">
+            <p>{{ .Site.Params.subtitle | default "& these are some links" }}
+                {{ range $link := .Site.Params.links }}
+                    <a href="{{ $link.url }}" title="{{ $link.name }}">
+                        <i class="fab fa-{{ $link.fa_logo }}"></i>
+                    </a>
+                {{ end }}
+            </p>
         </section>
     </header>
