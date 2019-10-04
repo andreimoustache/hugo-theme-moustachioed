@@ -1,5 +1,6 @@
 {{ define "main" }}
-    <section>
+    <section class="page">
+      <article class="intro">
         <h1>{{ .Params.title | default "This is Moustachioed." }}</h1>
         <p class="centered-text">{{ .Params.subtitle | default "& these are some links" }}</p>
 
@@ -12,9 +13,9 @@
             </li>
             {{ end }}
         </ul>
-    </section>
+      </article>
 
-    <section class="posts">
+    <article class="posts">
       {{ range (where .Site.Pages ".Type" "==" "post") }}
         <article class="post-summary">
           <header>
@@ -26,5 +27,6 @@
           </footer>
         </article>
       {{ end }}
+      </article>
     </section>
 {{ end }}
