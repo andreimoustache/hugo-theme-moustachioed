@@ -1,11 +1,11 @@
 {{ define "main" }}
     <section class="page">
       <article class="intro">
-        <h1>{{ .Params.title | default "This is Moustachioed." }}</h1>
-        <p class="centered-text">{{ .Params.subtitle | default "& these are some links" }}</p>
+        <h1>{{ .Site.Params.title | default "This is Moustachioed." }}</h1>
+        <p class="centered-text">{{ .Site.Params.subtitle | default "& these are some links" }}</p>
 
         <ul class="double-text">
-            {{ range $link := .Params.links }}
+            {{ range $link := .Site.Params.links }}
             <li>
                 <a href="{{ $link.url }}" title="{{ $link.name }}">
                   <i class="fab fa-{{ $link.fa_logo }}"></i>
