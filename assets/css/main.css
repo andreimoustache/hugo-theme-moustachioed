@@ -80,3 +80,9 @@ header a {
 .post pre {
     overflow-x: scroll;
 }
+
+section.page > article:after {
+    font-size: .7em;
+    margin-left: 50%;
+    content: "⁕"
+}
