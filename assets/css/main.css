@@ -29,6 +29,11 @@ footer {
     text-align: center
 }
 
+.faded {
+    color: #a5a5a5;
+    font-style: italic;
+}
+
 ul {
     display: grid;
     grid-auto-flow: column;
@@ -48,16 +53,16 @@ li {
     font-size: 2.5em;
 }
 
+.half-text {
+    font-size: .5em;
+}
+
 a:visited, a:link {
     color: #3f3f3f
 }
 
 a:hover {
     color: #000;
-}
-
-.posts footer {
-    font-style: italic;
 }
 
 header.page > .subtitle {
@@ -74,4 +79,10 @@ header a {
 
 .post pre {
     overflow-x: scroll;
+}
+
+section.page > article:after {
+    font-size: .7em;
+    margin-left: 50%;
+    content: "⁕"
 }
