@@ -27,4 +27,8 @@
     <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
     <link href="//fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/{{ .Site.Params.Fontawesome }}.js"></script>
+
+    {{ if and (isset .Site.Params "cookiebotid") (isset .Site.Params "googleanalyticstrackingid") }}
+        {{ partial "analytics.html" (dict "cbid" .Site.Params.cookiebotid "gaid" .Site.Params.googleanalyticstrackingid) }}
+    {{ end }}
 </head>

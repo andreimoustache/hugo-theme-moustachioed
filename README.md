@@ -28,6 +28,21 @@ name = "Twitter"
 fa_logo = "twitter"
 ```
 
+### Google Analytics & Cookiebot
+
+If you do not want to use Google Analytics and Cookiebot, just ignore this section.
+
+If you do want to use them, just add your IDs under the `params` section of the site config (`config.toml`).
+
+*Note*: GA won't be initialised if the cookie policy is accepted or if the browser set the `DNT` (do not track) header.
+
+```toml
+[params]
+# rest of the params ...
+cookiebotcbid = "xxx"
+googleanalyticstrackingid = "xxx"
+```
+
 ## Posts
 
 `hugo new posts/my-first-post.md`
