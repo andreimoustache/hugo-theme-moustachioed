@@ -29,6 +29,11 @@ footer {
     text-align: center
 }
 
+.faded {
+    color: #a5a5a5;
+    font-style: italic;
+}
+
 ul {
     display: grid;
     grid-auto-flow: column;
@@ -46,6 +51,10 @@ li {
 
 .double-text {
     font-size: 2.5em;
+}
+
+.half-text {
+    font-size: .5em;
 }
 
 a:visited, a:link {
