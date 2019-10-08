@@ -15,18 +15,21 @@
         </ul>
       </article>
 
-    <article class="posts">
-      {{ range (where .Site.Pages ".Type" "==" "post") }}
-        <article class="post-summary">
-          <header>
-            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-          </header>
-          <p>{{ .Summary }}</p>
-          <footer class="half-text">
-            <p>Published in <time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2006" }}</time>.</p>
-          </footer>
-        </article>
-      {{ end }}
+      {{ $posts := where .Site.Pages ".Type" "==" "post" }}
+      {{ if gt (len $posts) 0 }}
+      <article class="posts">
+        {{ range $posts }}
+          <article class="post-summary">
+            <header>
+              <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            </header>
+            <p>{{ .Summary }}</p>
+            <footer class="half-text">
+              <p>Published in <time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2006" }}</time>.</p>
+            </footer>
+          </article>
+        {{ end }}
       </article>
+      {{ end }}
     </section>
 {{ end }}
