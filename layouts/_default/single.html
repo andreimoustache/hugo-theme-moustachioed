@@ -3,6 +3,11 @@
         <article class="post">
             <h1>{{ .Title }}</h1>
             {{ .Content }}
+            <footer>
+                <p class="half-text end-text">
+                    Published in <time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2006" }}</time>.
+                </p>
+            </footer>
         </article>
     </section>
 {{ end }}
