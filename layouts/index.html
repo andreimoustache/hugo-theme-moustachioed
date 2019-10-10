@@ -1,7 +1,7 @@
 {{ define "main" }}
     <section class="page">
       <article class="intro">
-        <h1>{{ .Site.Title | default "This is Moustachioed." }}</h1>
+        <h1 class="centered-text">{{ .Site.Title | default "This is Moustachioed." }}</h1>
         <p class="centered-text">{{ .Site.Params.subtitle | default "& these are some links" }}</p>
 
         <ul class="double-text">
@@ -24,7 +24,7 @@
               <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
             </header>
             <p>{{ .Summary }}</p>
-            <footer class="half-text">
+            <footer class="half-text end-text">
               <p>Published in <time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2006" }}</time>.</p>
             </footer>
           </article>

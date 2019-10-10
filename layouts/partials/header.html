@@ -2,7 +2,7 @@
         <section class="title">
             <a href="{{ .Site.Home.Permalink }}"><h1>{{ .Site.Title }}</h1></a>
         </section>
-        <section class="subtitle">
+        <section class="subtitle end-text">
             <p>{{ .Site.Params.subtitle | default "& these are some links" }}
                 {{ range $link := .Site.Params.links }}
                     <a href="{{ $link.url }}" title="{{ $link.name }}">
